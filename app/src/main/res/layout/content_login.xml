@@ -26,4 +26,12 @@
         android:layout_below="@+id/churchly_text"
         android:layout_centerHorizontal="true" />
 
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/churchScroll"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textLog"
+        android:layout_marginTop="30dp" />
+
 </RelativeLayout>
