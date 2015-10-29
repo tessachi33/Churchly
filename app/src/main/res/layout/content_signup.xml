@@ -5,7 +5,18 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_signup"
-    tools:context="io.github.tessachi33.churchly.ui.signupActivity">
+    tools:context="io.github.tessachi33.churchly.ui.signupActivity"
+    android:background="#99D1E3"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/churchly_text"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/churchly_text"
+        android:background="@android:color/transparent" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -13,10 +24,13 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/signupName"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp"
-        android:hint="@string/signupNamw" />
+        android:hint="@string/signupNamw"
+        android:background="@android:color/white"
+        android:layout_below="@+id/textLog"
+        android:layout_alignLeft="@+id/signupPassword"
+        android:layout_alignStart="@+id/signupPassword"
+        android:layout_marginTop="20dp"
+        />
 
     <EditText
         android:layout_width="wrap_content"
@@ -27,7 +41,9 @@
         android:layout_below="@+id/signupName"
         android:layout_alignLeft="@+id/signupName"
         android:layout_alignStart="@+id/signupName"
-        android:hint="email" />
+        android:hint="email"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -37,7 +53,9 @@
         android:id="@+id/signupPassword"
         android:layout_below="@+id/signupEmail"
         android:layout_centerHorizontal="true"
-        android:hint="password" />
+        android:hint="password"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -47,14 +65,40 @@
         android:id="@+id/signupLocation"
         android:layout_below="@+id/signupPassword"
         android:layout_centerHorizontal="true"
-        android:hint="State or zipcode" />
+        android:hint="State"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Sign me up!"
         android:id="@+id/signupButton"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/signupLocation" />
+        android:layout_below="@+id/signupLocation"
+        android:layout_marginTop="20dp"
+        android:background="#ffdbdb"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/churchly_cross"
+        android:src="@drawable/churchly_cross"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/signupButton"
+        android:layout_alignRight="@+id/signupButton"
+        android:layout_alignEnd="@+id/signupButton"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sign up!"
+        android:id="@+id/textLog"
+        android:textSize="@android:dimen/app_icon_size"
+        android:layout_below="@+id/churchly_text"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
