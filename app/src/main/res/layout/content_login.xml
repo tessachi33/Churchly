@@ -41,7 +41,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
         android:layout_below="@+id/textLog"
-        android:layout_toLeftOf="@+id/textLog"
-        android:layout_toStartOf="@+id/textLog" />
+        android:layout_alignLeft="@+id/textLog"
+        android:layout_alignStart="@+id/textLog"
+        android:layout_alignRight="@+id/textLog"
+        android:layout_alignEnd="@+id/textLog" />
 
 </RelativeLayout>
