@@ -1,4 +1,4 @@
-package io.github.tessachi33.churchly;
+package io.github.tessachi33.churchly.ui;
 
 
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import android.widget.Button;
+
+import io.github.tessachi33.churchly.R;
 
 public class MainActivity extends AppCompatActivity {
 
