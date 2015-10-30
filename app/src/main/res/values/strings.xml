@@ -4,4 +4,6 @@
     <string name="title_activity_login">login</string>
     <string name="title_activity_signup">signupActivity</string>
     <string name="signupNamw">First and last name</string>
+    <string name="title_activity_user">userActivity</string>
+    <string name="title_activity_church">churchActivity</string>
 </resources>
