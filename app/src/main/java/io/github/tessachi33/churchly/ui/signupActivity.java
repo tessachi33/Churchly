@@ -11,6 +11,9 @@ import io.github.tessachi33.churchly.R;
 public class signupActivity extends AppCompatActivity {
 
     private Button mSignupButton;
+    private signupName mSignupName;
+    private signupEmail mSignupEmail;
+    private signupLocation mSignupLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
