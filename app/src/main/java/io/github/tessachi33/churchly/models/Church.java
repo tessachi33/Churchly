@@ -10,7 +10,9 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
-public class Church extends SQLiteOpenHelper {
+import io.github.tessachi33.churchly.ui.MainActivity;
+
+public class Church extends MainActivity {
 
 
 }

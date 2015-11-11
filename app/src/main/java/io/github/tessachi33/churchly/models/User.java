@@ -1,11 +1,7 @@
 package io.github.tessachi33.churchly.models;
 
 /**
- * Created by Tessa on 10/30/15.
+ * Created by Tessa on 11/11/15.
  */
-import android.database.sqlite.SQLiteOpenHelper;
-
-public class User extends SQLiteOpenHelper {
-
-
+public class User {
 }
