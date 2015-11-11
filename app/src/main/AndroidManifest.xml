@@ -3,7 +3,6 @@
     package="io.github.tessachi33.churchly" >
 
     <application
-        android:name="com.activeandroid.app.Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -51,5 +50,6 @@
                 android:value="io.github.tessachi33.churchly.ui.userActivity" />
         </activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

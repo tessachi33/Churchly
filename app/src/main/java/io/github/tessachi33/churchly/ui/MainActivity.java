@@ -8,6 +8,8 @@ import android.view.View;
 
 import android.widget.Button;
 
+import com.parse.Parse;
+
 import io.github.tessachi33.churchly.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, "hz4ABkxiLqsPDHxUYrHqh0DJAkKVuWTXA2xI4Q2V", "RpUcKjAzyx76UBkwbrWyT2SxRiV7oKGfY39We9GO");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
