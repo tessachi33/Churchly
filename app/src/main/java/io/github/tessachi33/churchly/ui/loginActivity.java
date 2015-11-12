@@ -1,5 +1,6 @@
 package io.github.tessachi33.churchly.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,10 +16,10 @@ import io.github.tessachi33.churchly.R;
 
 public class loginActivity extends AppCompatActivity {
     @Bind(R.id.loginButton) Button mLoginButton;
-    @Bind(R.id.Username) EditText mUsername;
-    @Bind(R.id.Email) EditText mEmail;
-    @Bind(R.id.Password) EditText mPassword;
-    @Bind(R.id.Zipcode) EditText mZipcode;
+//    @Bind(R.id.Username) EditText mUsername;
+//    @Bind(R.id.Email) EditText mEmail;
+//    @Bind(R.id.Password) EditText mPassword;
+//    @Bind(R.id.Zipcode) EditText mZipcode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,14 @@ public class loginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginActivity.this, userActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
 }
