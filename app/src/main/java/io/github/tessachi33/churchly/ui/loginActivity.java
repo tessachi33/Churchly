@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.parse.ParseUser;
 
@@ -18,7 +19,7 @@ import io.github.tessachi33.churchly.R;
 
 public class loginActivity extends AppCompatActivity {
     @Bind(R.id.loginButton) Button mLoginButton;
-//    @Bind(R.id.Username) EditText mUsername;
+ //   @Bind(R.id.Username) EditText mUsername;
 //    @Bind(R.id.Email) EditText mEmail;
 //    @Bind(R.id.Password) EditText mPassword;
 //    @Bind(R.id.Zipcode) EditText mZipcode;
@@ -29,6 +30,8 @@ public class loginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
+
+
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +39,7 @@ public class loginActivity extends AppCompatActivity {
                 startActivity(intent);
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 if (currentUser != null) {
-                    // do stuff with the user
+                    Toast.makeText(loginActivity.this, "Thanks for loggin in", Toast.LENGTH_SHORT).show();
                 } else {
                     // show the signup or login screen
                 }

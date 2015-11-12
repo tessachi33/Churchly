@@ -24,7 +24,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/Username"
-        android:hint="@string/signupNamw"
+        android:hint="Username"
         android:background="@android:color/white"
         android:layout_below="@+id/textLog"
         android:layout_alignLeft="@+id/Password"

@@ -25,8 +25,8 @@ import io.github.tessachi33.churchly.R;
 public class userActivity extends AppCompatActivity {
 
   @Bind(R.id.churchButton) Button mChurchButton;
-    @Bind(R.id.Username) EditText mUsername;
-    @Bind(R.id.userText) TextView mUserText;
+   // @Bind(R.id.Username) EditText mUsername;
+    //@Bind(R.id.userText) TextView mUserText;
 
 
     @Override
@@ -35,6 +35,9 @@ public class userActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user);
         ButterKnife.bind(this);
 
+     //   String Username = mUsername.getText().toString();
+
+      //  mUserText.setText("Username");
 
         mChurchButton.setOnClickListener(new View.OnClickListener() {
             @Override
