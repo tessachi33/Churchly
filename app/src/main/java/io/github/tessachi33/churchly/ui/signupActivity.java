@@ -5,15 +5,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import io.github.tessachi33.churchly.R;
 
 public class signupActivity extends AppCompatActivity {
 
     private Button mSignupButton;
-    private signupName mSignupName;
-    private signupEmail mSignupEmail;
-    private signupLocation mSignupLocation;
+    private EditText mSignupName;
+    private EditText mSignupEmail;
+    private EditText mSignupLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
