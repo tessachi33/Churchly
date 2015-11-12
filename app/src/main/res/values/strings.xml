@@ -6,4 +6,5 @@
     <string name="signupNamw">First and last name</string>
     <string name="title_activity_user">userActivity</string>
     <string name="title_activity_church">churchActivity</string>
+    <string name="title_activity_signup2">SignupActivity2</string>
 </resources>

@@ -14,7 +14,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.github.tessachi33.churchly.R;
 
-public class signupActivity extends AppCompatActivity {
+public class SignupActivity2 extends AppCompatActivity {
 
     @Bind(R.id.signupButton) Button mSignupButton;
     @Bind(R.id.Username) EditText mUsername;
@@ -26,15 +26,13 @@ public class signupActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
-        Parse.initialize(this, "hz4ABkxiLqsPDHxUYrHqh0DJAkKVuWTXA2xI4Q2V", "RpUcKjAzyx76UBkwbrWyT2SxRiV7oKGfY39We9GO");
+        setContentView(R.layout.activity_signup2);
         ButterKnife.bind(this);
-
 
         mSignupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signupActivity.this, userActivity.class);
+                Intent intent = new Intent(SignupActivity2.this, userActivity.class);
                 startActivity(intent);
 
                 String Username = mUsername.getText().toString();
@@ -48,11 +46,10 @@ public class signupActivity extends AppCompatActivity {
                 user.setPassword(Password);
                 user.put("Zipcode", Zipcode);
 
+                user.signUpInBackground();
+
 
             }
         });
-
-
-    }
-
+            }
 }

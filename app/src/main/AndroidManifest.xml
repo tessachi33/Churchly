@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.tessachi33.churchly" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,11 +20,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.signupActivity"
-            android:label="@string/title_activity_signup"
-            android:theme="@style/AppTheme" >
         </activity>
 
         <meta-data
@@ -49,7 +47,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.github.tessachi33.churchly.ui.userActivity" />
         </activity>
+        <activity
+            android:name=".ui.SignupActivity2"
+            android:label="@string/title_activity_signup2"
+            android:theme="@style/AppTheme" >
+        </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 </manifest>
