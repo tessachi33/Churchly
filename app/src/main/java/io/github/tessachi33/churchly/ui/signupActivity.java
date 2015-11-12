@@ -6,9 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
 import com.parse.Parse;
 import com.parse.ParseUser;
-
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -17,7 +17,7 @@ import io.github.tessachi33.churchly.R;
 public class signupActivity extends AppCompatActivity {
 
     @Bind(R.id.signupButton) Button mSignupButton;
-    @Bind(R.id.UserName) EditText mUsername;
+    @Bind(R.id.Username) EditText mUsername;
     @Bind(R.id.Email) EditText mEmail;
     @Bind(R.id.Password) EditText mPassword;
     @Bind(R.id.Zipcode) EditText mZipcode;
@@ -36,9 +36,13 @@ public class signupActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(signupActivity.this, userActivity.class);
                 startActivity(intent);
-//
-//
-//                Parse user = new ParseUser();
+
+                String Username = mUsername.getText().toString();
+                String Email = mEmail.getText().toString();
+                String Password = mPassword.getText().toString();
+                String Zipcode = mZipcode.getText().toString();
+
+                //Parse user = new ParseUser();
 //                user.setUsername(Username);
 //                user.setEmail(Email);
 //                user.setPassword(Password);
