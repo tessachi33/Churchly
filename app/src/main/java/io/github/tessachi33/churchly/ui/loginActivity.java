@@ -41,7 +41,7 @@ public class loginActivity extends AppCompatActivity {
                 if (currentUser != null) {
                     Toast.makeText(loginActivity.this, "Thanks for loggin in", Toast.LENGTH_SHORT).show();
                 } else {
-                    // show the signup or login screen
+                    Toast.makeText(loginActivity.this, "Could not log you in", Toast.LENGTH_SHORT).show();
                 }
 
             }
