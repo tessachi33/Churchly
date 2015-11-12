@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.parse.LogInCallback;
+import com.parse.ParseException;
 import com.parse.ParseUser;
 
 import butterknife.Bind;
@@ -19,9 +21,9 @@ import io.github.tessachi33.churchly.R;
 
 public class loginActivity extends AppCompatActivity {
     @Bind(R.id.loginButton) Button mLoginButton;
- //   @Bind(R.id.Username) EditText mUsername;
-//    @Bind(R.id.Email) EditText mEmail;
-//    @Bind(R.id.Password) EditText mPassword;
+  // @Bind(R.id.Username) EditText mUsername;
+    //@Bind(R.id.Email) EditText mEmail;
+  //  @Bind(R.id.Password) EditText mPassword;
 //    @Bind(R.id.Zipcode) EditText mZipcode;
 
     @Override
@@ -35,17 +37,26 @@ public class loginActivity extends AppCompatActivity {
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(loginActivity.this, userActivity.class);
-                startActivity(intent);
-                ParseUser currentUser = ParseUser.getCurrentUser();
-                if (currentUser != null) {
-                    Toast.makeText(loginActivity.this, "Thanks for loggin in", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(loginActivity.this, "Could not log you in", Toast.LENGTH_SHORT).show();
-                }
 
+              //  String Username = mUsername.getText().toString();
+                //String Email = mEmail.getText().toString();
+             //   String Password = mPassword.getText().toString();
+
+                ParseUser.logInInBackground("Username", "Password", new LogInCallback() {
+                    public void done(ParseUser user, ParseException e) {
+                        if (user != null) {
+                            Intent intent = new Intent(loginActivity.this, userActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(loginActivity.this,
+                                    "Hurray, you logged in!", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(loginActivity.this,
+                                    "oops, you haven't logged in!", Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                });
             }
         });
     }
-
 }

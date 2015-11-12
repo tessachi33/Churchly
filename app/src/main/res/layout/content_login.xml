@@ -41,8 +41,8 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/email"
-        android:hint="email"
+        android:id="@+id/Username"
+        android:hint="Username"
         android:textStyle="bold"
         android:typeface="normal"
         android:background="@android:color/white"
@@ -60,9 +60,9 @@
         android:textStyle="bold"
         android:hint="password"
         android:background="@android:color/white"
-        android:layout_alignLeft="@+id/email"
-        android:layout_alignStart="@+id/email"
-        android:layout_below="@+id/email"
+        android:layout_alignLeft="@+id/Username"
+        android:layout_alignStart="@+id/Username"
+        android:layout_below="@+id/Username"
         android:layout_marginTop="16dp"
         android:padding="10dp" />
 
