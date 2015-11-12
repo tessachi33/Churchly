@@ -42,11 +42,11 @@ public class signupActivity extends AppCompatActivity {
                 String Password = mPassword.getText().toString();
                 String Zipcode = mZipcode.getText().toString();
 
-                //Parse user = new ParseUser();
-//                user.setUsername(Username);
-//                user.setEmail(Email);
-//                user.setPassword(Password);
-//                user.Zipcode(Zipcode);
+                ParseUser user = new ParseUser();
+                user.setUsername(Username);
+                user.setEmail(Email);
+                user.setPassword(Password);
+                user.put("Zipcode", Zipcode);
 
 
             }
