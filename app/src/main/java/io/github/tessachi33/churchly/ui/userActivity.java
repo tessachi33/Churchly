@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.parse.LogInCallback;
 import com.parse.Parse;
@@ -24,6 +25,8 @@ import io.github.tessachi33.churchly.R;
 public class userActivity extends AppCompatActivity {
 
   @Bind(R.id.churchButton) Button mChurchButton;
+    @Bind(R.id.Username) EditText mUsername;
+    @Bind(R.id.userText) TextView mUserText;
 
 
     @Override
@@ -31,6 +34,7 @@ public class userActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         ButterKnife.bind(this);
+
 
         mChurchButton.setOnClickListener(new View.OnClickListener() {
             @Override
