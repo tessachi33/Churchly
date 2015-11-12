@@ -17,11 +17,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Hi, friend"
+        android:text="Hi, "
         android:id="@+id/textLog"
         android:textSize="@android:dimen/app_icon_size"
         android:layout_below="@+id/churchly_text"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/churchButton"
+        android:layout_alignStart="@+id/churchButton"
+        android:layout_marginLeft="91dp"
+        android:layout_marginStart="91dp"/>
 
     <Button
         android:layout_width="match_parent"
@@ -37,16 +40,30 @@
         android:layout_marginBottom="10dp"
         android:layout_margin="10dp"/>
 
-    <ListView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/userList"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="User"
+        android:id="@+id/userName"
+        android:layout_below="@+id/churchly_text"
+        android:layout_toRightOf="@+id/textLog"
+        android:layout_toEndOf="@+id/textLog"
+        android:textSize="50dp"
+        android:textColor="#4f676e"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
         android:layout_below="@+id/textLog"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_above="@+id/churchButton"
-        android:layout_margin="20dp"
-        />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/placeholder"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="204dp"
+        android:layout_above="@+id/churchButton"/>
 
 </RelativeLayout>
 
