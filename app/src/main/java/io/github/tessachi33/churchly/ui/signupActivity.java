@@ -14,6 +14,7 @@ public class signupActivity extends AppCompatActivity {
     private Button mSignupButton;
     private EditText mSignupName;
     private EditText mSignupEmail;
+    private EditText mSignupPassword;
     private EditText mSignupLocation;
 
     @Override
@@ -28,6 +29,12 @@ public class signupActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(signupActivity.this, userActivity.class);
                 startActivity(intent);
+
+                mSignupName = (EditText) findViewById(R.id.signupName);
+                mSignupEmail = (EditText) findViewById(R.id.signupEmail);
+                mSignupPassword = (EditText) findViewById(R.id.signupPassword);
+                mSignupLocation = (EditText) findViewById(R.id.signupLocation);
+
             }
         });
 

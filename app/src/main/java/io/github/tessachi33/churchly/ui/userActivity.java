@@ -30,6 +30,8 @@ public class userActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(userActivity.this, churchActivity.class);
                 startActivity(intent);
+
+
             }
         });
     }
