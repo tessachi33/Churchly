@@ -51,7 +51,7 @@
         android:layout_toEndOf="@+id/textLog"
         android:textSize="50dp"
         android:textColor="#4f676e"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="5dp"/>
 
     <ImageView
         android:layout_width="wrap_content"
