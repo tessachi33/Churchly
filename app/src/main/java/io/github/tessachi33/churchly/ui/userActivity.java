@@ -9,13 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 import io.github.tessachi33.churchly.R;
 
 public class userActivity extends AppCompatActivity {
 
-    private signupName mSignupName;
-    private signupEmail mSignupEmail;
-    private signupLocation mSignupLocation;
+    private ArrayList<String> mUser;
     private Button mChurchButton;
 
     @Override
