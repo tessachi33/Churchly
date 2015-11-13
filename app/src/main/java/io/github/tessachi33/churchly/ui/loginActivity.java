@@ -38,10 +38,10 @@ public class loginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               String Username = mUsername.getText().toString().trim();
-               String Password = mPassword.getText().toString().trim();
+               String username = mUsername.getText().toString().trim();
+               String password = mPassword.getText().toString().trim();
 
-                ParseUser.logInInBackground(Username, Password, new LogInCallback() {
+                ParseUser.logInInBackground(username, password, new LogInCallback() {
                     public void done(ParseUser user, ParseException e) {
                         if (user != null) {
                             Toast.makeText(loginActivity.this, "Hurray, you logged in!", Toast.LENGTH_LONG).show();
