@@ -83,9 +83,9 @@
         android:id="@+id/loginButton"
         android:textStyle="bold"
         android:background="#ffcbcb"
-        android:layout_below="@+id/password"
-        android:layout_alignLeft="@+id/password"
-        android:layout_alignStart="@+id/password"
-        android:layout_marginTop="15dp" />
+        android:layout_below="@+id/Password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"/>
 
 </RelativeLayout>
