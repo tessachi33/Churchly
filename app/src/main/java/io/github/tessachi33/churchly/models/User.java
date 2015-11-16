@@ -20,7 +20,7 @@ public class User extends ParseObject {
     }
 
     public String getPassword() {
-        return getString("pasword");
+        return getString("password");
     }
 
     public String getZipcode() {
