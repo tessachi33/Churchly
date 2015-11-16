@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.github.tessachi33.churchly.R;
+import io.github.tessachi33.churchly.models.User;
 
 public class userActivity extends AppCompatActivity {
 
@@ -35,8 +36,9 @@ public class userActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user);
         ButterKnife.bind(this);
 
-//        String username = mUsername.getText().toString().trim();
-//        mUser.setText(username);
+
+        String username = ParseUser.getCurrentUser().getUsername();
+        mUser.setText(username);
 
         mChurchButton.setOnClickListener(new View.OnClickListener() {
 

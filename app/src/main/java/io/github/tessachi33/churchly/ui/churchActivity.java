@@ -8,12 +8,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.parse.Parse;
+import com.parse.ParseObject;
+
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.github.tessachi33.churchly.R;
+import io.github.tessachi33.churchly.models.Church;
 
 public class churchActivity extends AppCompatActivity {
 
@@ -25,7 +30,7 @@ public class churchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_church);
         ButterKnife.bind(this);
-
+        
         mUserButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
