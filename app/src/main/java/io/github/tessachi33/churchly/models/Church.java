@@ -81,7 +81,7 @@ public class Church extends ParseObject {
 
     }
 
-    public static void findChurchByName(final String churchName, final Activity context, final Runnable runnable) {
+    public static void findChurchByName(final String churchName, final Activity findChurch, final Runnable runnable) {
     ParseQuery<Church> query = ParseQuery.getQuery(Church.class) .whereEqualTo(churchName, "name");
     query.findInBackground(new FindCallback<Church>() {
         @Override

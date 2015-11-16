@@ -7,4 +7,5 @@
     <string name="title_activity_user">userActivity</string>
     <string name="title_activity_church">churchActivity</string>
     <string name="title_activity_signup2">SignupActivity2</string>
+    <string name="title_activity_single_church">SingleChurchActivity</string>
 </resources>

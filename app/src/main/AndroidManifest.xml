@@ -39,7 +39,7 @@
                 android:value="io.github.tessachi33.churchly.ui.MainActivity" />
         </activity>
         <activity
-            android:name=".ui.churchActivity"
+            android:name=".ui.ChurchActivity"
             android:label="@string/title_activity_church"
             android:parentActivityName=".ui.userActivity"
             android:theme="@style/AppTheme" >
@@ -55,6 +55,11 @@
         <activity
             android:name=".ui.loginActivity"
             android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".ui.SingleChurchActivity"
+            android:label="@string/title_activity_single_church"
             android:theme="@style/AppTheme" >
         </activity>
     </application>
