@@ -3,7 +3,9 @@ package io.github.tessachi33.churchly.models;
 /**
  * Created by Tessa on 10/28/15.
  */
+import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Context;
 import android.util.Log;
 
 import com.parse.FindCallback;
@@ -21,7 +23,13 @@ import io.github.tessachi33.churchly.ui.MainActivity;
 
 public class Church extends ParseObject {
 
-    public static List<Church> mChurch;
+    public static List<Church> mChurches;
+
+    private static Church mChurch;
+
+    public static Church getChurch() {
+        return mChurch;
+    }
 
     public Church() {
         super();
@@ -52,17 +60,18 @@ public class Church extends ParseObject {
     }
 
 
-    public static List<Church> getChurch() {
-        return mChurch;
+    public static List<Church> getAllChurches() {
+        return mChurches;
     }
 
-    public List getChurches() {
-        ParseQuery<Church> query = ParseQuery.getQuery("Church");
+    public static void getChurches(final Activity context, final Runnable runnable) {
+        ParseQuery<Church> query = ParseQuery.getQuery(Church.class);
         query.findInBackground(new FindCallback<Church>() {
             @Override
-            public void done(List<Church> objects, com.parse.ParseException e) {
+            public void done(List<Church> Churches, com.parse.ParseException e) {
                 if (e == null) {
-                    Log.d("Church", "Retrieved " + getChurches());
+                    mChurches = Churches;
+                    context.runOnUiThread(runnable);
                 } else {
                     Log.d("Church", "Error: " + e.getMessage());
 
@@ -70,8 +79,26 @@ public class Church extends ParseObject {
             }
         });
 
-        return getChurches();
     }
+
+    public static void findChurchByName(final String churchName, final Activity context, final Runnable runnable) {
+    ParseQuery<Church> query = ParseQuery.getQuery(Church.class) .whereEqualTo(churchName, "name");
+    query.findInBackground(new FindCallback<Church>() {
+        @Override
+        public void done(List<Church> Churches, com.parse.ParseException e) {
+            if (e == null) {
+                mChurches = Churches;
+                mChurch = mChurches.get(0);
+                context.runOnUiThread(runnable);
+            } else {
+                Log.d("Church", "Error: " + e.getMessage());
+
+            }
+        }
+    });
+
+}
+
 }
 
 //        query.whereEqualTo(getName(), "name");
