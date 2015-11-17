@@ -4,20 +4,13 @@ package io.github.tessachi33.churchly.models;
  * Created by Tessa on 10/28/15.
  */
 import android.app.Activity;
-import android.app.ListActivity;
-import android.content.Context;
 import android.util.Log;
-
 import com.parse.FindCallback;
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-
-import java.io.File;
-import java.text.ParseException;
 import java.util.List;
 
-import io.github.tessachi33.churchly.ui.MainActivity;
 
 @ParseClassName("Church")
 
@@ -25,12 +18,6 @@ import io.github.tessachi33.churchly.ui.MainActivity;
 public class Church extends ParseObject {
 
     public static List<Church> mChurches;
-//
-//    private static Church mChurch;
-//
-//    public static Church getChurch() {
-//        return mChurch;
-//    }
 
     public Church() {
         super();

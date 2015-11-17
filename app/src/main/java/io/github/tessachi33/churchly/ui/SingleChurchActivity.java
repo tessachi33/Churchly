@@ -26,9 +26,6 @@ import io.github.tessachi33.churchly.models.Church;
 
 public class SingleChurchActivity extends AppCompatActivity {
 
-    private Church mChurch;
-   // private ParseObject Church;
-    private String mAddress;
     @Bind(R.id.userButton)
     Button mUserButton;
     @Bind (R.id.churchName) TextView mChurchName;
@@ -36,13 +33,6 @@ public class SingleChurchActivity extends AppCompatActivity {
     @Bind (R.id.churchPhone) TextView mChurchPhone;
     @Bind (R.id.churchWebsite) TextView mChurchWebsite;
     @Bind (R.id.churchReview) TextView mChurchReview;
-
-
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
