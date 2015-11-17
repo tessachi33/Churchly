@@ -2,10 +2,7 @@ package io.github.tessachi33.churchly.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,7 +42,7 @@ public class loginActivity extends AppCompatActivity {
                     public void done(ParseUser user, ParseException e) {
                         if (user != null) {
                             Toast.makeText(loginActivity.this, "Hurray, you logged in!", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(loginActivity.this, userActivity.class);
+                            Intent intent = new Intent(loginActivity.this, UserActivity.class);
                             startActivity(intent);
 //
                         } else {

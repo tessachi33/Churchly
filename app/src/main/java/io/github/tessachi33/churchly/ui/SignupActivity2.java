@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.parse.Parse;
 import com.parse.ParseUser;
 
 import butterknife.Bind;
@@ -32,7 +31,7 @@ public class SignupActivity2 extends AppCompatActivity {
         mSignupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignupActivity2.this, userActivity.class);
+                Intent intent = new Intent(SignupActivity2.this, UserActivity.class);
                 startActivity(intent);
 
                 String Username = mUsername.getText().toString();
