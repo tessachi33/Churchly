@@ -35,7 +35,6 @@ public class SingleChurchActivity extends AppCompatActivity {
     @Bind (R.id.churchAddress) TextView mChurchAddress;
     @Bind (R.id.churchPhone) TextView mChurchPhone;
     @Bind (R.id.churchWebsite) TextView mChurchWebsite;
-    @Bind (R.id.churchImage) TextView mChurchImage;
     @Bind (R.id.churchReview) TextView mChurchReview;
 
 
@@ -68,14 +67,12 @@ public class SingleChurchActivity extends AppCompatActivity {
                 String mAddress = church.getAddress();
                 String mPhone = church.getPhone();
                 String mWebsite = church.getWebsite();
-                String mImage = church.getImage();
                 String mReview = church.getReview();
 
                 mChurchName.setText(mName);
                 mChurchAddress.setText(mAddress);
                 mChurchPhone.setText(mPhone);
                 mChurchWebsite.setText(mWebsite);
-                mChurchImage.setText(mImage);
                 mChurchReview.setText(mReview);
             }
         });
