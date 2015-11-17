@@ -104,7 +104,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="10dp"
-                android:background="#f4b6b6"/>
+                android:background="#FFD4DA"/>
         </LinearLayout>
     </ScrollView>
 
