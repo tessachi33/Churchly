@@ -25,7 +25,7 @@
         android:background="@android:color/transparent"
         android:layout_below="@+id/signupButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"/>
+        android:layout_marginTop="46dp" android:layout_marginBottom="15dp"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -49,4 +49,12 @@
         android:layout_marginTop="20dp"
         android:background="#FFF5A5"
         android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome!"
+        android:id="@+id/textView2" android:layout_below="@+id/churchly_text"
+        android:layout_centerHorizontal="true" android:textSize="40dp"
+        android:textColor="@android:color/white"/>
 </RelativeLayout>
