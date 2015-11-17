@@ -13,7 +13,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.github.tessachi33.churchly.R;
 
-public class userActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity {
 
   @Bind(R.id.churchButton) Button mChurchButton;
 //    @Bind(R.id.Username) EditText mUsername;
@@ -34,7 +34,7 @@ public class userActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(userActivity.this, ChurchActivity.class);
+                Intent intent = new Intent(UserActivity.this, ChurchActivity.class);
                 startActivity(intent);
 
             }
