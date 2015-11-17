@@ -34,9 +34,10 @@
                 android:id="@+id/churchName"
                 android:layout_below="@+id/churchly_text"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="60dp" android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp" android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp" android:layout_marginRight="30dp"
-                android:gravity="center_vertical|center_horizontal"/>
+                android:gravity="center_vertical|center_horizontal" android:textSize="25dp"
+                android:textStyle="bold" android:layout_gravity="center_horizontal"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +60,7 @@
                 android:layout_alignStart="@+id/churchAddress"
                 android:layout_marginLeft="60dp" android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp" android:layout_marginRight="30dp"
-                android:gravity="center_vertical|center_horizontal"/>
+                android:gravity="center_vertical|center_horizontal" android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,7 +84,7 @@
                 android:layout_alignStart="@+id/churchImage"
                 android:layout_marginLeft="60dp" android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp" android:layout_marginRight="30dp"
-                android:gravity="center_vertical|center_horizontal"/>
+                android:gravity="center_vertical|center_horizontal" android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
