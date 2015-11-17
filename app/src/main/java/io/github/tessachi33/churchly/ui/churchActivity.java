@@ -39,7 +39,9 @@ public class ChurchActivity extends AppCompatActivity {
                 mChurches = Church.getAllChurches();
                 List<String> Churches = new ArrayList<String>();
                 for (ParseObject thisChurch : mChurches){
-                    String churchName = thisChurch.getString("name");
+                    Church church = (Church) thisChurch;
+
+                    String churchName = church.getName();
                     Churches.add(churchName);
 
                 }
@@ -58,7 +60,7 @@ public class ChurchActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(ChurchActivity.this, userActivity.class);
+                        Intent intent = new Intent(ChurchActivity.this, UserActivity.class);
                         startActivity(intent);
 
                     }
