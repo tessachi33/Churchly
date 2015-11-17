@@ -54,11 +54,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you ready to find a new Church? No matter what you are looking for, I know you can find it!"
-        android:id="@+id/textView"
-        android:layout_centerHorizontal="true" android:gravity="center_vertical"
-        android:layout_marginLeft="80dp" android:layout_marginRight="80dp" android:textSize="15dp"
-        android:layout_below="@+id/textLog" android:layout_marginTop="10dp"/>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="I go to Church so you don&apos;t have to...until you want to."
+        android:id="@+id/textView3"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/textLog" android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp" android:layout_marginRight="50dp"/>
 
 </RelativeLayout>
 
