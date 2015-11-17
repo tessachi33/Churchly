@@ -4,7 +4,7 @@
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 android:background="#99D1E3"
-    >
+                android:gravity="center_horizontal">
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_alignLeft="@+id/churchButton"
         android:layout_alignStart="@+id/churchButton"
         android:layout_marginLeft="88dp"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white" android:gravity="center_horizontal"/>
 
     <Button
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
         android:textColor="@android:color/white"
         android:layout_alignBottom="@+id/textLog"
         android:layout_toRightOf="@+id/textLog"
-        android:layout_toEndOf="@+id/textLog"/>
+        android:layout_toEndOf="@+id/textLog" android:gravity="center_horizontal"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
