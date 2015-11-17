@@ -13,6 +13,7 @@ import com.parse.ParseClassName;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.io.File;
 import java.text.ParseException;
 import java.util.List;
 
@@ -24,24 +25,18 @@ import io.github.tessachi33.churchly.ui.MainActivity;
 public class Church extends ParseObject {
 
     public static List<Church> mChurches;
-
-    private static Church mChurch;
-
-    public static Church getChurch() {
-        return mChurch;
-    }
+//
+//    private static Church mChurch;
+//
+//    public static Church getChurch() {
+//        return mChurch;
+//    }
 
     public Church() {
         super();
     }
 
-    public String getName() {
-        return getString("name");
-    }
-
-    public String getImage() {
-        return getString("image");
-    }
+    public String getName() { return getString("name"); }
 
     public String getAddress() {
         return getString("address");
