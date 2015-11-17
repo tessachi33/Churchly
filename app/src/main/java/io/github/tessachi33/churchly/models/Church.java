@@ -82,13 +82,13 @@ public class Church extends ParseObject {
     }
 
     public static void findChurchByName(final String churchName, final Activity context, final Runnable runnable) {
-    ParseQuery<Church> query = ParseQuery.getQuery(Church.class) .whereEqualTo(churchName, "name");
+    ParseQuery<Church> query = ParseQuery.getQuery(Church.class) .whereEqualTo("name", churchName);
     query.findInBackground(new FindCallback<Church>() {
         @Override
         public void done(List<Church> Churches, com.parse.ParseException e) {
             if (e == null) {
                 mChurches = Churches;
-                mChurch = mChurches.get(0);
+                mChurch = (Church)mChurches.get(0);
                 context.runOnUiThread(runnable);
             } else {
                 Log.d("Church", "Error: " + e.getMessage());
@@ -98,6 +98,10 @@ public class Church extends ParseObject {
     });
 
 }
+
+    public static ParseObject getThisChurch(){
+        return mChurch;
+    }
 
 }
 

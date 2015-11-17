@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ import io.github.tessachi33.churchly.models.Church;
 public class SingleChurchActivity extends AppCompatActivity {
 
     private Church mChurch;
+   // private ParseObject Church;
     private String mAddress;
     @Bind(R.id.userButton)
     Button mUserButton;
@@ -63,6 +65,7 @@ public class SingleChurchActivity extends AppCompatActivity {
                 mChurch = Church.getChurch();
                 //setThisStuff(mChurch);
                 mAddress = mChurch.getString("address");
+               mChurchAddress.setText(mAddress);
 
             }
 
