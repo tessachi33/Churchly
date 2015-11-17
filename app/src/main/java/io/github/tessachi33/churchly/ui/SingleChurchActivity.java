@@ -1,19 +1,20 @@
 package io.github.tessachi33.churchly.ui;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseException;
 import com.parse.ParseObject;
-import com.parse.ParseUser;
+import com.parse.ParseQuery;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
@@ -51,41 +52,45 @@ public class SingleChurchActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
-
-
         Intent intent = getIntent();
-        final String churchName = intent.getStringExtra("churchName");
-//        findChurchByName
-
-        Church.findChurchByName(churchName, SingleChurchActivity.this, new Runnable() {
+        String churchName = intent.getStringExtra("churchName");
+        ParseQuery<Church> query =  ParseQuery.getQuery(Church.class);
+        query.whereEqualTo("name", churchName);
+        query.getFirstInBackground(new GetCallback() {
             @Override
-            public void run() {
-
-
-                mChurch = Church.getChurch();
-                //setThisStuff(mChurch);
-                mAddress = mChurch.getString("address");
-               mChurchAddress.setText(mAddress);
-
+            public void done(ParseObject object, ParseException e) {
             }
 
+            @Override
+            public void done(Object o, Throwable throwable) {
+                Church church = (Church) o;
+                String mName = church.getName();
+                String mAddress = church.getAddress();
+                String mPhone = church.getPhone();
+                String mWebsite = church.getWebsite();
+                String mImage = church.getImage();
+                String mReview = church.getReview();
+
+                mChurchName.setText(mName);
+                mChurchAddress.setText(mAddress);
+                mChurchPhone.setText(mPhone);
+                mChurchWebsite.setText(mWebsite);
+                mChurchImage.setText(mImage);
+                mChurchReview.setText(mReview);
+            }
         });
+
 
 
         mUserButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SingleChurchActivity.this, userActivity.class);
+                Intent intent = new Intent(SingleChurchActivity.this, UserActivity.class);
                 startActivity(intent);
 
             }
         });
     }
 
-//    public void setThisStuff(Church thisChurch){
-//        mAddress = thisChurch.getString("address");
-//        mChurchAddress.setText(mAddress);
-//
-//    }
 }
