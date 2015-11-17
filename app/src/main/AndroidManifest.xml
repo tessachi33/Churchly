@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".ui.ChurchApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,7 +31,7 @@
             android:value="1" />
 
         <activity
-            android:name=".ui.userActivity"
+            android:name=".ui.UserActivity"
             android:label="@string/title_activity_user"
             android:parentActivityName=".ui.MainActivity"
             android:theme="@style/AppTheme" >
@@ -41,11 +42,11 @@
         <activity
             android:name=".ui.ChurchActivity"
             android:label="@string/title_activity_church"
-            android:parentActivityName=".ui.userActivity"
+            android:parentActivityName=".ui.UserActivity"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.github.tessachi33.churchly.ui.userActivity" />
+                android:value=".ui.UserActivity" />
         </activity>
         <activity
             android:name=".ui.SignupActivity2"
@@ -60,6 +61,11 @@
         <activity
             android:name=".ui.SingleChurchActivity"
             android:label="@string/title_activity_single_church"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".ui.ChurchApplication"
+            android:label="@string/title_activity_church_application"
             android:theme="@style/AppTheme" >
         </activity>
     </application>

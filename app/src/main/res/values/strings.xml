@@ -8,4 +8,5 @@
     <string name="title_activity_church">churchActivity</string>
     <string name="title_activity_signup2">SignupActivity2</string>
     <string name="title_activity_single_church">SingleChurchActivity</string>
+    <string name="title_activity_church_application">ChurchApplication</string>
 </resources>
