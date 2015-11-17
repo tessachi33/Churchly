@@ -34,7 +34,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="#f3ffcece"
+        android:background="#FFD4DA"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
@@ -51,6 +51,14 @@
         android:layout_alignBottom="@+id/textLog"
         android:layout_toRightOf="@+id/textLog"
         android:layout_toEndOf="@+id/textLog"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you ready to find a new Church? No matter what you are looking for, I know you can find it!"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true" android:gravity="center_vertical"
+        android:layout_marginLeft="80dp" android:layout_marginRight="80dp" android:textSize="15dp"
+        android:layout_below="@+id/textLog" android:layout_marginTop="10dp"/>
 
 </RelativeLayout>
 
