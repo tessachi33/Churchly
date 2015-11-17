@@ -33,7 +33,7 @@
         android:text="Log-in"
         android:id="@+id/loginButton"
         android:textStyle="bold"
-        android:background="#ffcbcb"
+        android:background="#FFd4DA"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
@@ -47,6 +47,6 @@
         android:layout_alignLeft="@+id/loginButton"
         android:layout_alignStart="@+id/loginButton"
         android:layout_marginTop="20dp"
-        android:background="#ffdbdb"
+        android:background="#FFF5A5"
         android:textStyle="bold" />
 </RelativeLayout>

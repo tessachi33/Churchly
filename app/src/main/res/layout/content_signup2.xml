@@ -70,25 +70,23 @@
         android:background="@android:color/white" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Sign me up!"
         android:id="@+id/signupButton"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/Zipcode"
         android:layout_marginTop="20dp"
-        android:background="#ffdbdb"
-        />
+        android:background="#FFF5A5"
+        android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/churchly_cross"
         android:src="@drawable/churchly_cross"
         android:background="@android:color/transparent"
-        android:layout_below="@+id/signupButton"
-        android:layout_alignRight="@+id/signupButton"
-        android:layout_alignEnd="@+id/signupButton"
-        android:layout_marginTop="40dp" />
+        android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signupButton" android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
