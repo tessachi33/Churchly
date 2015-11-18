@@ -45,7 +45,8 @@ public class SingleChurchActivity extends AppCompatActivity {
         String churchName = intent.getStringExtra("churchName");
         ParseQuery<Church> query =  ParseQuery.getQuery(Church.class);
         query.whereEqualTo("name", churchName);
-        query.getFirstInBackground(new GetCallback() {
+        query.getFirstInBackground(new GetCallback()
+        {
             @Override
             public void done(ParseObject object, ParseException e) {
             }

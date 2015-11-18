@@ -37,6 +37,8 @@ public class ChurchActivity extends AppCompatActivity {
             public void run() {
 
                 mChurches = Church.getAllChurches();
+
+                //make variable names lowercase and class names uppercase
                 List<String> Churches = new ArrayList<String>();
                 for (ParseObject thisChurch : mChurches){
                     Church church = (Church) thisChurch;
@@ -72,7 +74,7 @@ public class ChurchActivity extends AppCompatActivity {
     public void setThatList(List<String> stringList, ListView listView) {
       ArrayAdapter arrayAdapter = new ArrayAdapter<>(
                 ChurchActivity.this,
-                android.R.layout.simple_list_item_1,
+                android.R.layout.simple_gallery_item, //make custom list layout and maybe adapter
                 stringList);
         listView.setAdapter(arrayAdapter);
     }

@@ -20,11 +20,9 @@
         android:text="Hi,"
         android:id="@+id/textLog"
         android:textSize="45dp"
-        android:layout_below="@+id/churchly_text"
-        android:layout_alignLeft="@+id/churchButton"
-        android:layout_alignStart="@+id/churchButton"
-        android:layout_marginLeft="88dp"
-        android:textColor="@android:color/white" android:gravity="center_horizontal"/>
+        android:textColor="@android:color/white" android:gravity="center_horizontal"
+        android:layout_below="@+id/churchly_text" android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"/>
 
     <Button
         android:layout_width="match_parent"

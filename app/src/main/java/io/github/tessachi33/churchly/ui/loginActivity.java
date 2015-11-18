@@ -16,7 +16,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.github.tessachi33.churchly.R;
 
-public class loginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     @Bind(R.id.loginButton) Button mLoginButton;
     @Bind(R.id.Username) EditText mUsername;
     //@Bind(R.id.Email) EditText mEmail;
@@ -41,12 +41,12 @@ public class loginActivity extends AppCompatActivity {
                 ParseUser.logInInBackground(username, password, new LogInCallback() {
                     public void done(ParseUser user, ParseException e) {
                         if (user != null) {
-                            Toast.makeText(loginActivity.this, "Hurray, you logged in!", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(loginActivity.this, UserActivity.class);
+                            Toast.makeText(LoginActivity.this, "Hurray, you logged in!", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(LoginActivity.this, UserActivity.class);
                             startActivity(intent);
 //
                         } else {
-                            Toast.makeText(loginActivity.this,
+                            Toast.makeText(LoginActivity.this,
                                     "oops, you haven't logged in!", Toast.LENGTH_LONG).show();
                         }
                     }

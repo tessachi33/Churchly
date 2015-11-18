@@ -8,11 +8,7 @@ import android.view.View;
 
 import android.widget.Button;
 
-import com.parse.Parse;
-import com.parse.ParseObject;
-
 import io.github.tessachi33.churchly.R;
-import io.github.tessachi33.churchly.models.Church;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, loginActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
