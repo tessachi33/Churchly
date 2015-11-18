@@ -7,8 +7,11 @@ import android.app.Activity;
 import android.util.Log;
 import com.parse.FindCallback;
 import com.parse.ParseClassName;
+import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+
+import java.io.File;
 import java.util.List;
 
 
@@ -24,6 +27,8 @@ public class Church extends ParseObject {
     }
 
     public String getName() { return getString("name"); }
+
+    public ParseFile getImage() { return getParseFile("image"); }
 
     public String getAddress() {
         return getString("address");
