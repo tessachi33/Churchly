@@ -32,7 +32,7 @@ public class SignupActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignupActivity2.this, UserActivity.class);
-                startActivity(intent);
+                //startActivity(intent);
 
                 String Username = mUsername.getText().toString();
                 String Email = mEmail.getText().toString();
@@ -47,8 +47,11 @@ public class SignupActivity2 extends AppCompatActivity {
 
                 user.signUpInBackground();
 
+                startActivity(intent);
+
+
 
             }
         });
-            }
+    }
 }
