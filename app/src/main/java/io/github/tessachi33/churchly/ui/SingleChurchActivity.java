@@ -2,6 +2,7 @@ package io.github.tessachi33.churchly.ui;
 
 import android.app.DownloadManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -82,3 +83,6 @@ public class SingleChurchActivity extends AppCompatActivity {
     }
 
 }
+
+// Uri number = Uri.parse(mPhone);
+//Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
