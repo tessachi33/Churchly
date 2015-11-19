@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.util.Linkify;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -46,8 +47,7 @@ public class SingleChurchActivity extends AppCompatActivity {
         String churchName = intent.getStringExtra("churchName");
         ParseQuery<Church> query =  ParseQuery.getQuery(Church.class);
         query.whereEqualTo("name", churchName);
-        query.getFirstInBackground(new GetCallback()
-        {
+        query.getFirstInBackground(new GetCallback() {
             @Override
             public void done(ParseObject object, ParseException e) {
             }
@@ -66,10 +66,14 @@ public class SingleChurchActivity extends AppCompatActivity {
                 mChurchPhone.setText(mPhone);
                 mChurchWebsite.setText(mWebsite);
                 mChurchReview.setText(mReview);
+
+                TextView churchWebsite = (TextView) findViewById(R.id.churchWebsite);
+                Linkify.addLinks(mChurchWebsite, Linkify.WEB_URLS);
             }
         });
 
-
+//        TextView churchWebsite = (TextView) findViewById(R.id.churchWebsite);
+//        Linkify.addLinks(mChurchWebsite, Linkify.WEB_URLS);
 
         mChurchButton.setOnClickListener(new View.OnClickListener() {
 
@@ -83,6 +87,3 @@ public class SingleChurchActivity extends AppCompatActivity {
     }
 
 }
-
-// Uri number = Uri.parse(mPhone);
-//Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
