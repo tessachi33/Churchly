@@ -26,8 +26,8 @@ import io.github.tessachi33.churchly.models.Church;
 
 public class SingleChurchActivity extends AppCompatActivity {
 
-    @Bind(R.id.userButton)
-    Button mUserButton;
+    @Bind(R.id.churchButton)
+    Button mChurchButton;
     @Bind (R.id.churchName) TextView mChurchName;
     @Bind (R.id.churchAddress) TextView mChurchAddress;
     @Bind (R.id.churchPhone) TextView mChurchPhone;
@@ -70,11 +70,11 @@ public class SingleChurchActivity extends AppCompatActivity {
 
 
 
-        mUserButton.setOnClickListener(new View.OnClickListener() {
+        mChurchButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SingleChurchActivity.this, UserActivity.class);
+                Intent intent = new Intent(SingleChurchActivity.this, ChurchActivity.class);
                 startActivity(intent);
 
             }

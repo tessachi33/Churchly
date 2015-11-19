@@ -88,8 +88,8 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Back to my profile!"
-                android:id="@+id/userButton"
+                android:text="Back to churches!"
+                android:id="@+id/churchButton"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="10dp"
